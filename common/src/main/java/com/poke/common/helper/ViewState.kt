@@ -6,7 +6,7 @@ sealed class LoadState {
     object Loading : LoadState()
 }
 
-data class LoadingViewState<T>(
+data class ViewState<T>(
     val data: T,
     val loadType: LoadType = LoadType.Load,
     val failed: Boolean = false

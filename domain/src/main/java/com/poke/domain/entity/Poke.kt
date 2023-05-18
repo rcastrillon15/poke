@@ -1,6 +1,6 @@
-package com.poke.data.response
+package com.poke.domain.entity
 
-data class PokeResponse(
+data class Poke(
     val count: Int,
     val next: String,
     val results: List<Result>
