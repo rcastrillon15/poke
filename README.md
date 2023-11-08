@@ -20,3 +20,5 @@ Room
 Encriptación al guardar en una base de datos local
 MotionLayout
 UI Testing
+
+Doc = https://docs.google.com/document/d/1xTcUpVxust6kG7PwyZbgxWKtsUrDFoYJtXK6ANbcHts/edit#heading=h.3bf8lddwgy9v

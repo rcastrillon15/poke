@@ -10,7 +10,7 @@ fun AppNavHost(
     navController: NavHostController = rememberNavController(),
     startDestination: String = HomeDestination.route
 ) {
-    NavHost(navController = navController, startDestination = startDestination){
-    homeGraph(navController = navController)
+    NavHost(navController = navController, startDestination = startDestination) {
+        homeGraph(navController = navController)
     }
 }

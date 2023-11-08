@@ -6,6 +6,7 @@ data class Poke(
     val results: List<Result>
 ){
     data class Result(
+        val id:Int,
         val name: String,
         val url: String
     )
