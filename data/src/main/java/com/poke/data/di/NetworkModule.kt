@@ -2,6 +2,7 @@ package com.poke.data.di
 
 import com.poke.common.Constants.BASE_URL
 import com.poke.data.network.PokeService
+import com.poke.data.source.local.PokeLocalDataSource
 import com.poke.data.source.remote.PokeRemoteDataSource
 import com.poke.data.source.remote.PokeRemoteDataSourceImpl
 import dagger.Module
@@ -54,5 +55,5 @@ object NetworkModule {
     @Singleton
     @Provides
     fun providerInterface(service: PokeService): PokeRemoteDataSource =
-        PokeRemoteDataSourceImpl(service)
+        PokeRemoteDataSourceImpl(service = service)
 }

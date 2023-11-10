@@ -1,13 +1,13 @@
 package com.poke.data.response
 
 data class PokeSpecieResponse(
-    val id: Int?,
-    val name: String?,
-    val base_happiness: Int?,
-    val capture_rate: Int?,
-    val gender_rate: Int?,
-    val hatch_counter: Int?,
-    val order: Int?,
+    val id: Int,
+    val name: String,
+    val base_happiness: Int,
+    val capture_rate: Int,
+    val gender_rate: Int,
+    val hatch_counter: Int,
+    val order: Int,
     val forms_switchable: Boolean,
     val has_gender_differences: Boolean,
     val is_baby: Boolean,

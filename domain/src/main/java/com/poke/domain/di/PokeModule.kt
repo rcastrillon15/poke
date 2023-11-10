@@ -1,5 +1,6 @@
 package com.poke.domain.di
 
+import com.poke.data.source.local.PokeLocalDataSource
 import com.poke.data.source.remote.PokeRemoteDataSource
 import com.poke.domain.repository.PokeRepository
 import com.poke.domain.repository.PokeRepositoryImpl
@@ -14,8 +15,12 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 object PokeModule {
     @Provides
-    fun providerRepository(remoteDataSource: PokeRemoteDataSource): PokeRepository = PokeRepositoryImpl(
-        remoteDataSource = remoteDataSource
+    fun providerRepository(
+        remoteDataSource: PokeRemoteDataSource,
+        local: PokeLocalDataSource
+    ): PokeRepository = PokeRepositoryImpl(
+        remoteDataSource = remoteDataSource,
+        local = local
     )
 
     @Provides

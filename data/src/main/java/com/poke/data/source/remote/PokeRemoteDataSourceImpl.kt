@@ -2,9 +2,11 @@ package com.poke.data.source.remote
 
 import com.poke.common.helper.Either
 import com.poke.common.helper.ErrorFactory
+import com.poke.data.mapper.toEntity
 import com.poke.data.network.PokeService
 import com.poke.data.response.PokeResponse
 import com.poke.data.response.PokeSpecieResponse
+import com.poke.data.source.local.PokeLocalDataSource
 import javax.inject.Inject
 
 class PokeRemoteDataSourceImpl @Inject constructor(private val service: PokeService) :

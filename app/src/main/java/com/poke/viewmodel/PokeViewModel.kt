@@ -39,7 +39,6 @@ class PokeViewModel @Inject constructor(private val useCase: PokeUseCase) : View
     fun getPoke() {
         _viewState.value.isLoading
         viewModelScope.launch {
-
             _viewState.update { state ->
                 useCase.getPoke(limit = PAGE_SIZE, offset = currentPage * PAGE_SIZE)
                     .fold(

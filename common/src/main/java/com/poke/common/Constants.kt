@@ -1,6 +1,7 @@
 package com.poke.common
 
 object Constants {
+    const val INTERNET_CONNECTION = "No internet connection"
     const val BASE_URL = "https://pokeapi.co/api/v2/"
     const val PAGE_SIZE = 20
     const val METHOD_GET_POKEMON = "pokemon"

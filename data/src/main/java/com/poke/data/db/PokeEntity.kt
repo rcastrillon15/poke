@@ -7,7 +7,16 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "poke")
 data class PokeEntity(
     @PrimaryKey(autoGenerate = true)
-    val _id: Int = 0,
-    @ColumnInfo(name = "id")
-    val id: String
-)
+    val id: Int = 0,
+    @ColumnInfo(name = "count")
+    val count: Int,
+    @ColumnInfo(name = "next")
+    val next: String,
+    @ColumnInfo(name = "results")
+    val results: List<Result>
+) {
+    data class Result(
+        val name: String,
+        val url: String
+    )
+}

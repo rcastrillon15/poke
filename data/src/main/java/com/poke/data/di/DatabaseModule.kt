@@ -4,7 +4,9 @@ import android.content.Context
 import androidx.room.Room
 import com.poke.common.Constants.DATABASE_NAME
 import com.poke.data.db.PokeDataBase
+import com.poke.data.db.PokeLocalQuery
 import com.poke.data.source.local.PokeLocalDataSource
+import com.poke.data.source.local.PokeLocalDataSourceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +19,7 @@ import javax.inject.Singleton
 object DatabaseModule {
     @Provides
     @Singleton
-    fun provideChannelDao(database: PokeDataBase): PokeLocalDataSource {
+    fun provideChannelDao(database: PokeDataBase): PokeLocalQuery {
         return database.pokeLocal()
     }
 
@@ -30,4 +32,8 @@ object DatabaseModule {
             DATABASE_NAME
         ).build()
     }
+
+    @Provides
+    @Singleton
+    fun providePokeLocal(db: PokeLocalQuery): PokeLocalDataSource = PokeLocalDataSourceImpl(db = db)
 }
